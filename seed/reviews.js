@@ -5,56 +5,56 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 
     const main = async () => {
-        const ww = await Recipe.find({name: 'Wicked Waffles'})
-        const tf = await Recipe.find({name: 'Tango Fish'})
-        const ss = await Recipe.find({name: 'Spanish Sauce'})
-        const jj = await Recipe.find({name: 'Jungle Juice'})
+        const st = await Recipe.find({name: 'Shrimp Tacos'})
+        const mc = await Recipe.find({name: 'Miso-Honey Chicken and Asparagus'})
+        const sc = await Recipe.find({name: 'Sock-It-to-Me Cake'})
+        const cp = await Recipe.find({name: 'Chive Pesto Potato Salad'})
 
         const reviews = [
         {
             recipeName: ss[0]._id,
             score: 4,
-            comment: 'Noice.'
+            comment: 'This recipe was amazing! Highly recommend.'
         },
         {
             recipeName: tf[0]._id,
             score: 2,
-            comment: 'Noice 2.'
+            comment: 'Not a fan of this recipe. Would not recommend.'
         },
         {
             recipeName: ww[0]._id,
             score: 5,
-            comment: 'Noice 3.'
+            comment: 'The best recipe I have ever made. 10/10 would recommend!'
         },
         {   
             recipeName: ss[0]._id,
             score: 3,
-            comment: 'Noice 4.'
+            comment: 'Decent recipe, but not exceptional.'
         },
         {
             recipeName: ww[0]._id,
             score: 5,
-            comment: 'Noice 5.'
+            comment: 'Absolutely loved this recipe!'
         },
         {
             recipeName: ss[0]._id,
             score: 1,
-            comment: 'Noice 6.'
+            comment: 'Terrible recipe, would never have it again.'
         },
         {
             recipeName: jj[0]._id,
             score: 4,
-            comment: 'Noice 7.'
+            comment: 'Great taste and presentation.'
         },
         {
             recipeName: tf[0]._id,
             score: 4,
-            comment: 'Noice 8.'
+            comment: 'Good choice if you like bold flavors.'
         }
 ];
 
 await Review.insertMany(reviews)
-    console.log("Its time to eat!")
+    console.log("Time to eat!")
 }
 const run = async () => {
     await main()

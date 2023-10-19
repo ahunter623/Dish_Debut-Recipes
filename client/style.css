@@ -1,6 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: cursive;
+  background-image: url("assets/Chef_Presentation.jpeg");
+  background-color: #ccc;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,33 +11,35 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2rem;
   color: #333;
   margin: 20px 0;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #555;
   margin: 10px 0;
 }
 
 input[type="text"] {
   padding: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #0d72df;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 button:hover {
@@ -44,18 +47,17 @@ button:hover {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 li {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 5px 0;
   color: #333;
 }
 
-/* Style the results lists */
-
+/* Style the Results lists */
 #recipeNameResults, #ingredientResults {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -63,12 +65,12 @@ li {
   padding: 10px;
   width: 80%;
   margin: 10px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Center the results list items */
-
+/* Center the Results list */
 #recipeNameResults li, #ingredientResults li {
   text-align: left;
   margin: 5px 0;
 }
+

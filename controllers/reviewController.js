@@ -1,5 +1,9 @@
 const { Review } = require('../models')
 
+module.exports = {
+    getReviews,
+    createReview
+}
 
 async function createReview (req, res) {
     console.log('test', req.body)
@@ -20,9 +24,4 @@ async function getReviews(req, res) {
     } catch (e) {
         return res.status(500).send(e.message)
     }
-}
-
-module.exports = {
-    getReviews,
-    createReview
 }

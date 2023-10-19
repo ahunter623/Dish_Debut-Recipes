@@ -1,15 +1,12 @@
 const { Schema } = require('mongoose')
-const mongoose = require('mongoose')
-const Recipe = mongoose.model('Recipe', recipeSchema)
 
-const recipeSchema = new Schema (
+const recipesSchema = new Schema (
     {
-        name: { type: String, required: true }, // 
-        ingredients: { type: String, required: true},
-        instructions: { type: String, required: true},
+        name: { type: String, required: true },
+        description: { type: String, required: true},
         image: { type: String, required: true}, // Image
         review: { type: Schema.Types.ObjectId, ref: 'Review'} // user input
     }
 )
 
-module.exports = recipeSchema
+module.exports = recipesSchema
