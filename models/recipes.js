@@ -1,4 +1,6 @@
 const { Schema } = require('mongoose')
+const mongoose = require('mongoose')
+const Recipe = mongoose.model('Recipe', recipeSchema)
 
 const recipeSchema = new Schema (
     {

@@ -1,15 +1,17 @@
 const mongoose = require('mongoose')
 
-const recipesSchema = require('./recipes')
-const reviewsSchema = require('./reviews')
-const usersSchema = require('./users')
+// Import all Model files
+const Recipe = require('./recipes');
+const User = require('./users'); // ** Working on User Model **
 
-const Recipe = mongoose.model('recipe', recipesSchema)
-const Review = mongoose.model('review', reviewsSchema)
-const User = mongoose.model('user', usersSchema)
+// Establish a connection to MongoDB database
+mongoose.connect('mongodb://127.0.0.1:27017/recipesDatabase', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
+// Export the models
 module.exports = {
     Recipe,
-    Review,
-    User
-}
+    User, // ** Working on User Model **
+};

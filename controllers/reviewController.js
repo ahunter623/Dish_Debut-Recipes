@@ -1,9 +1,5 @@
 const { Review } = require('../models')
 
-module.exports = {
-    getReviews,
-    createReview
-}
 
 async function createReview (req, res) {
     console.log('test', req.body)
@@ -26,3 +22,7 @@ async function getReviews(req, res) {
     }
 }
 
+module.exports = {
+    getReviews,
+    createReview
+}

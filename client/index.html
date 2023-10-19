@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dish Debut Recipe App</title>
+    <!-- Link to Axios from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="client/style.css">
+</head>
+<body>
+    <h1>Dish Debut ... Debut your best dish!</h1>
+
+    <div>
+        <h2>Search by Recipe Name</h2>
+        <input type="text" id="recipeNameInput" placeholder="Enter recipe name">
+        <button onclick="searchRecipeByName()">Search</button>
+        <ul id="recipeNameResults"></ul>
+    </div>
+
+    <div>
+        <h2>Search by Ingredient</h2>
+        <input type="text" id="ingredientInput" placeholder="Enter ingredient">
+        <button onclick="searchRecipeByIngredient()">Search</button>
+        <ul id="ingredientResults"></ul>
+    </div>
+
+<!-- Link to JavaScript file-->
+    <script src="script.js"></script>
+</body>
+</html>

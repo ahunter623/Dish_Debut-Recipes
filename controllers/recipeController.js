@@ -1,30 +1,41 @@
-const { Recipe } = require('../models')
+const axios = require('axios')
 
+const API_KEY = '2c13fe575e05457eb33bf47a6265d826'
+const API_URL = 'https://api.spoonacular.com/recipes'
 
-
-async function getRecipes(req, res) {
+async function searchRecipeByName(req, res) {
+    const recipeName = req.query.name;
     try {
-        const recipes = await Recipe.find()
-        res.json(recipes)
-    } catch (e) {
-        return res.status(500).send(e.message)
+        const response = await axios.get(`${API_URL}/complexSearch`, {
+            params: {
+                apiKey: API_KEY,
+                query: recipeName,
+            }
+        });
+
+        res.json(response.data.results);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to find recipes' })
     }
 }
 
-async function getRecipe(req, res) {
+async function searchRecipeByIngredient(req, res) {
+    const ingredient = req.query.ingredient;
     try {
-        const id = req.params.id
-        const recipe = await Recipe.findById(id)
-        if (recipe) {
-            return res.json(recipe)
-        }
-        return res.status(404).send(`${Recipe} isn't a real recipe.`)
-    } catch (e) {
-        return res.status(500).send(e.message)
+        const response = await axios.get(`${API_URL}/findByIngredients`, {
+            params: {
+                apiKey: API_KEY,
+                ingredients: ingredient,
+            }
+        });
+
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to find recipes' })
     }
 }
 
-    module.exports = {
-        getRecipes,
-        getRecipe
-    }
+module.exports = {
+    searchRecipeByName,
+    searchRecipeByIngredient,
+}
