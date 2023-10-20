@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Recipe, Review } = require('../models')
+const { Recipe } = require('../models/recipes');
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -26,7 +26,7 @@ const main = async () => {
     ]
 
     await Recipe.insertMany(recipes)
-    console.log("Eat up!")
+    console.log("Created some recipes!")
 }
 const run = async () => {
     await main()
