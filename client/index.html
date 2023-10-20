@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dish Debut Recipe App</title>
-    <!-- Link to Axios from CDN -->
-    <script src=""></script>
-    
     <!-- Link to CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Dish Debut ... Debut your best dish!</h1>
+    <header>
+        <h1>Dish Debut ... Debut your best dish!</h1>
+    </header>
 
-    <div>
-        <h2>Search by Recipe Name</h2>
-        <input type="text" id="recipeNameInput" placeholder="Enter recipe name">
-        <button onclick="searchRecipeByName()">Search</button>
-        <ul id="recipeNameResults"></ul>
-    </div>
+    <main>
+        <section>
+            <h2>Search by Recipe Name</h2>
+            <input type="text" id="recipeNameInput" placeholder="Enter recipe name">
+            <button id="recipeNameButton">Search</button>
+            <ul id="recipeNameResults"></ul>
+        </section>
 
-    <div>
-        <h2>Search by Ingredient</h2>
-        <input type="text" id="ingredientInput" placeholder="Enter ingredient">
-        <button onclick="searchRecipeByIngredient()">Search</button>
-        <ul id="ingredientResults"></ul>
-    </div>
+        <section>
+            <h2>Search by Ingredient</h2>
+            <input type="text" id="ingredientInput" placeholder="Enter ingredient">
+            <button id="ingredientButton">Search</button>
+            <ul id="ingredientResults"></ul>
+        </section>
+    </main>
 
-<!-- Link to JavaScript file-->
+    <footer>
+        <p>&copy; 2023 A Hunter Design</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="script.js"></script>
 </body>
 </html>
