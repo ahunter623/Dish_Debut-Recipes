@@ -1,4 +1,4 @@
-const Plant = require('../models/user');
+const { User } = require('../models');
 
 const getAllUsers = async (req, res) => {
     try {

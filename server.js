@@ -34,8 +34,8 @@ app.delete('/recipes/:id', recipeController.deleteRecipe);
 app.get('/reviews', reviewController.getReviews);
 app.post('/reviews', reviewController.createReview);
 
-app.put('/reviews/:id', reviewController.updateReview);
-app.delete('/reviews/:id', reviewController.deleteReview);
+//app.put('/reviews/:id', reviewController.updateReview);
+//app.delete('/reviews/:id', reviewController.deleteReview);
 
 
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
