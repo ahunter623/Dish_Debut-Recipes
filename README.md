@@ -3,7 +3,7 @@
 
 
 
-![Dish Debut Logo](link to logo.png)
+[![Dish Debut Logo](link to logo.png)](http://127.0.0.1:5502/client/)
 
 ## Description
 
